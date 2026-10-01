@@ -15,7 +15,7 @@ A small, free, local-first command-line tool for organizing job applications and
 From a terminal:
 
 ```bash
-git clone https://github.com/yeain-shukla/job-application-helper.git
+git clone https://github.com/yeainshukla/job-application-helper.git
 cd job-application-helper
 python3 -m pip install .
 jobapp init
