@@ -115,6 +115,21 @@ jobapp status APP_ID submitted --follow-up 2026-10-15
 jobapp --help
 ```
 
+## Using Codex for a more automated workflow
+
+The command-line tool runs locally on its own. It cannot see Codex connectors, your signed-in browser session, or other apps. If you open this project in Codex and ask it to run the application workflow, Codex can coordinate the available tools and complete many steps in one supervised run. Depending on the connectors and permissions available, that can include finding matching openings, preparing application materials, filling supported forms, submitting applications when you have asked it to, and recording outcomes. Some users have successfully used this kind of connected workflow; the exact coverage depends on the employer site and the access available in that Codex session.
+
+For that workflow, provide/configure:
+
+1. **Your application profile and current resume/cover-letter files** in the private local data directory. Confirm that every statement and answer is accurate.
+2. **Search preferences** such as target roles, locations, seniority, exclusions, and whether sponsorship is needed. Add company ATS board slugs if you want those employers searched.
+3. **Codex access to this local project** so it can run the CLI and read/write the private tracker. Keep the private data directory outside the public repository.
+4. **A signed-in browser session or browser-control capability** if an employer application requires a user session. Sign in yourself; do not put account passwords in this repository or in profile files.
+5. **Relevant connected sources** for any additional job boards or email verification workflow you want Codex to use. Connect only the apps needed and grant the narrowest useful access. Email access is optional; you can instead enter one-time verification codes yourself.
+6. **Clear authorization and review preferences**: whether Codex may click Submit for each application, what questions it may answer from your saved profile, and which questions it must leave for you. Review the first applications and any changed answer policy closely.
+
+With the necessary connector/browser access and a complete profile, Codex may be able to handle most routine steps. Access alone cannot make every employer workflow automatable: CAPTCHAs, identity checks, one-time codes, unusual legal or eligibility questions, anti-bot controls, expired postings, and site-specific rules can still require your participation or stop automation. Codex should not bypass those controls; complete required human checks yourself. Never let it guess certifications, work authorization, demographic answers, or other consequential statements.
+
 ## Supported sources and limitations
 
 - **Search:** public Greenhouse, Ashby, and Lever company board APIs for configured board slugs; RemoteOK and Remotive public remote-job feeds. It does not search every employer or job board on the internet, and board APIs can change or rate-limit requests.
