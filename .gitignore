@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.coverage
+.pytest_cache/
+private-data/
+data/
+*.pdf
+*.docx
+*.xlsx
+.DS_Store

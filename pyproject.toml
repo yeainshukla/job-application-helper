@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-application-helper"
+version = "0.1.0"
+description = "A private, local-first organizer and preparation checklist for job applications."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Job Application Helper contributors" }]
+dependencies = []
+
+[project.scripts]
+jobapp = "jobapp.cli:main"
+
+[tool.setuptools]
+packages = ["jobapp"]
